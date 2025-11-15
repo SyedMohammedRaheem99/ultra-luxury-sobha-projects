@@ -9,12 +9,12 @@ module.exports = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#0A1A3E',
-          dark: '#050F24',
+          DEFAULT: '#0A2540',
+          dark: '#0D3B66',
         },
-        gold: {
-          DEFAULT: '#D4AF37',
-          light: '#C9A74E',
+        turquoise: {
+          DEFAULT: '#00D9FF',
+          light: '#00F0FF',
         },
       },
       fontFamily: {
