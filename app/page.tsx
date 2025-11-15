@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { 
   Building2, Users, Award, Globe, Shield, MapPin, Phone, Mail, 
-  Instagram, Linkedin, Facebook, ChevronRight, Check, Star, Sparkles, ArrowRight
+  Instagram, Linkedin, Facebook, ChevronRight, Check, Star, Sparkles, ArrowRight, Calendar
 } from 'lucide-react'
 
 interface FormData {
@@ -86,108 +86,146 @@ export default function Home() {
   ]
 
   return (
-    <div className="bg-black text-white">
-      {/* Hero Section - Ultra Minimalist */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        {/* Subtle Grid */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }} />
+    <div className="bg-[#1a1a1a] text-[#f5f5f0]">
+      {/* Hero Section - Luxury Premium */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#252525] to-[#1a1a1a]">
+        {/* Elegant Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, #C9A961 1px, transparent 0)`,
+              backgroundSize: '40px 40px'
+            }}
+          />
+        </div>
 
-        {/* Ambient Silver Glow */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-400/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500/10 rounded-full blur-[120px]" />
+        {/* Premium Golden Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-radial from-[#C9A961]/10 via-transparent to-transparent blur-3xl" />
+        
+        {/* Subtle Dubai Skyline */}
+        <div className="absolute inset-0 opacity-10">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=2400')"
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] via-[#1a1a1a]/50 to-[#1a1a1a]" />
+        </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto py-20">
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-7xl mx-auto py-20">
           <div 
             className="mb-8 opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.1s forwards' }}
           >
-            <span className="inline-block text-gray-400 text-xs font-medium tracking-[0.4em] uppercase">
-              Exclusive Event
-            </span>
+            <div className="inline-flex items-center gap-3 px-6 py-2 border border-[#C9A961]/30 rounded-full bg-[#C9A961]/5 backdrop-blur-sm">
+              <div className="w-2 h-2 rounded-full bg-[#C9A961] animate-pulse" />
+              <span className="text-[#C9A961] text-xs font-semibold tracking-[0.25em] uppercase">
+                Exclusive Event • Coimbatore 2025
+              </span>
+            </div>
           </div>
 
           <h1 
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light mb-8 text-white opacity-0"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif mb-8 text-[#f5f5f0] opacity-0 leading-[1.1]"
             style={{ 
               animation: 'fadeInUp 0.8s ease-out 0.2s forwards',
-              letterSpacing: '-0.04em',
-              fontWeight: 200
+              letterSpacing: '-0.02em'
             }}
           >
             Dubai Property<br />
-            <span className="font-extralight text-gray-300">Roadshow</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A961] via-[#D4AF37] to-[#C9A961]">
+              Roadshow
+            </span>
           </h1>
           
           <div 
-            className="mb-12 opacity-0"
+            className="flex items-center justify-center gap-6 mb-10 opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.3s forwards' }}
           >
-            <div className="inline-flex items-center gap-6 px-8 py-4 border border-gray-800 rounded-full bg-gray-900/30 backdrop-blur-sm">
-              <span className="text-xl font-light text-gray-300">Coimbatore</span>
-              <div className="w-px h-6 bg-gray-700" />
-              <span className="text-xl font-light text-white">2025</span>
+            <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent" />
+            <div className="flex items-center gap-3 text-[#C9A961]">
+              <Calendar className="w-5 h-5" />
+              <span className="text-lg font-medium">15–16 November 2025</span>
             </div>
+            <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent" />
           </div>
           
           <div 
-            className="space-y-3 mb-16 text-gray-400 opacity-0"
+            className="space-y-2 mb-12 opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.4s forwards' }}
           >
-            <p className="text-lg sm:text-xl font-light tracking-wide">15–16 November 2025</p>
-            <p className="text-base sm:text-lg font-light">Vivanta Surya, by Taj</p>
+            <p className="text-xl text-[#d4d4c8] font-light">Vivanta Surya, by Taj • 10 AM – 9 PM</p>
           </div>
           
-          <div 
-            className="flex flex-col sm:flex-row gap-4 justify-center opacity-0"
+          <p 
+            className="text-xl sm:text-2xl text-[#a3a399] mb-14 max-w-3xl mx-auto leading-relaxed opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.5s forwards' }}
+          >
+            Experience Dubai's most prestigious real estate developments.<br className="hidden sm:block" />
+            Connect with elite developers. Secure exclusive opportunities.
+          </p>
+          
+          <div 
+            className="flex flex-col sm:flex-row gap-5 justify-center opacity-0"
+            style={{ animation: 'fadeInUp 0.8s ease-out 0.6s forwards' }}
           >
             <a 
               href="#register" 
-              className="group bg-white text-black px-10 py-4 rounded-full font-medium text-base hover:bg-gray-200 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              className="group relative bg-gradient-to-r from-[#C9A961] via-[#D4AF37] to-[#C9A961] text-[#1a1a1a] px-12 py-5 rounded-full font-bold text-base hover:shadow-[0_20px_60px_rgba(201,169,97,0.4)] transition-all duration-500 hover:scale-105 overflow-hidden"
             >
-              Reserve Your Spot
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Reserve Your Spot
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </a>
             <a 
               href="https://wa.me/919187138799" 
-              className="bg-transparent border border-gray-700 text-white px-10 py-4 rounded-full font-light text-base hover:bg-gray-900/50 hover:border-gray-600 transition-all duration-300"
+              className="border-2 border-[#C9A961]/50 text-[#C9A961] px-12 py-5 rounded-full font-semibold text-base hover:bg-[#C9A961]/10 hover:border-[#C9A961] transition-all duration-300"
             >
-              Contact Us
+              Contact via WhatsApp
             </a>
           </div>
 
           <div 
-            className="mt-20 flex flex-wrap items-center justify-center gap-12 text-xs text-gray-500 opacity-0"
-            style={{ animation: 'fadeIn 0.8s ease-out 0.7s forwards' }}
+            className="mt-16 flex flex-wrap items-center justify-center gap-10 opacity-0"
+            style={{ animation: 'fadeIn 0.8s ease-out 0.8s forwards' }}
           >
-            <span className="flex items-center gap-2">
-              <div className="w-1 h-1 rounded-full bg-gray-600" />
-              Free Entry
-            </span>
-            <span className="flex items-center gap-2">
-              <div className="w-1 h-1 rounded-full bg-gray-600" />
-              No Obligation
-            </span>
-            <span className="flex items-center gap-2">
-              <div className="w-1 h-1 rounded-full bg-gray-600" />
-              Expert Guidance
-            </span>
+            <div className="flex items-center gap-3 text-[#a3a399]">
+              <div className="w-8 h-8 rounded-full border border-[#C9A961]/30 flex items-center justify-center">
+                <Check className="w-4 h-4 text-[#C9A961]" />
+              </div>
+              <span className="text-sm">Complimentary Entry</span>
+            </div>
+            <div className="flex items-center gap-3 text-[#a3a399]">
+              <div className="w-8 h-8 rounded-full border border-[#C9A961]/30 flex items-center justify-center">
+                <Check className="w-4 h-4 text-[#C9A961]" />
+              </div>
+              <span className="text-sm">Expert Consultations</span>
+            </div>
+            <div className="flex items-center gap-3 text-[#a3a399]">
+              <div className="w-8 h-8 rounded-full border border-[#C9A961]/30 flex items-center justify-center">
+                <Check className="w-4 h-4 text-[#C9A961]" />
+              </div>
+              <span className="text-sm">Exclusive Offers</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 px-6 bg-black border-t border-gray-900">
+      <section className="py-20 px-6 bg-gradient-to-b from-[#252525] to-[#1a1a1a] border-t border-[#C9A961]/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center group">
-                <div className="text-5xl md:text-6xl font-extralight text-white mb-3 group-hover:text-gray-300 transition-colors">{stat.number}</div>
-                <div className="text-gray-500 text-sm tracking-wider uppercase font-light">{stat.label}</div>
+                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-[#C9A961] to-[#D4AF37] bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
+                  {stat.number}
+                </div>
+                <div className="text-[#a3a399] text-sm tracking-wider uppercase">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -195,72 +233,79 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="animate-about" className="py-32 px-6 max-w-7xl mx-auto border-t border-gray-900">
+      <section id="animate-about" className="py-28 px-6 max-w-7xl mx-auto">
         <div className={`grid md:grid-cols-2 gap-20 items-center transition-all duration-1000 ${isVisible['animate-about'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <div className="order-2 md:order-1">
-            <span className="inline-block text-gray-500 text-xs font-light tracking-[0.3em] uppercase mb-6">
-              About the Event
-            </span>
-            <h2 className="text-5xl md:text-6xl font-extralight text-white mb-8 leading-tight">
-              An Exclusive<br />Investment Showcase
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-[#C9A961]/20 rounded-full bg-[#C9A961]/5">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961]" />
+              <span className="text-[#C9A961] text-xs font-semibold tracking-widest uppercase">
+                About the Event
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-serif text-[#f5f5f0] mb-6 leading-tight">
+              An Exclusive Investment<br />Showcase
             </h2>
-            <div className="h-px w-16 bg-gray-700 mb-10" />
-            <p className="text-lg text-gray-400 leading-relaxed mb-6 font-light">
-              Step into the world of Dubai's most coveted real estate opportunities. Super Realty Dubai presents an intimate showcase featuring handpicked premium developments.
+            <div className="h-1 w-24 bg-gradient-to-r from-[#C9A961] to-transparent mb-8" />
+            <p className="text-lg text-[#d4d4c8] leading-relaxed mb-6">
+              Step into the world of Dubai's most coveted real estate opportunities. Super Realty Dubai presents an intimate showcase featuring handpicked premium developments from the region's most trusted developers.
             </p>
-            <p className="text-gray-500 leading-relaxed mb-12 font-light">
-              Whether you're seeking a luxury residence, strategic investment, or residency through property ownership, our expert consultants will guide you through every step.
+            <p className="text-[#a3a399] leading-relaxed mb-10">
+              Whether you're seeking a luxury residence, strategic investment, or residency through property ownership, our expert consultants will guide you through every step of your journey to owning a piece of Dubai.
             </p>
 
-            <div className="space-y-4 mb-12">
-              <div className="flex items-center gap-4 text-sm">
-                <div className="w-8 h-8 rounded-full border border-gray-800 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-4 h-4 text-gray-400" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+              <div className="flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-[#C9A961]/10 to-transparent border border-[#C9A961]/20">
+                <div className="w-12 h-12 rounded-xl bg-[#C9A961]/20 flex items-center justify-center flex-shrink-0">
+                  <Award className="w-6 h-6 text-[#C9A961]" />
                 </div>
                 <div>
-                  <span className="text-white font-light">Free Consultation</span>
-                  <span className="text-gray-600 ml-2">Worth ₹50,000</span>
+                  <div className="font-semibold text-[#f5f5f0] mb-1">Free Consultation</div>
+                  <div className="text-sm text-[#a3a399]">Worth ₹50,000</div>
                 </div>
               </div>
-              <div className="flex items-center gap-4 text-sm">
-                <div className="w-8 h-8 rounded-full border border-gray-800 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-4 h-4 text-gray-400" />
+              <div className="flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-[#C9A961]/10 to-transparent border border-[#C9A961]/20">
+                <div className="w-12 h-12 rounded-xl bg-[#C9A961]/20 flex items-center justify-center flex-shrink-0">
+                  <Sparkles className="w-6 h-6 text-[#C9A961]" />
                 </div>
                 <div>
-                  <span className="text-white font-light">Special Pricing</span>
-                  <span className="text-gray-600 ml-2">Up to 5% off</span>
+                  <div className="font-semibold text-[#f5f5f0] mb-1">Special Pricing</div>
+                  <div className="text-sm text-[#a3a399]">Up to 5% discount</div>
                 </div>
               </div>
             </div>
 
-            <a href="#register" className="inline-flex items-center text-white font-light hover:gap-3 transition-all duration-300 group">
+            <a href="#register" className="inline-flex items-center text-[#C9A961] font-semibold hover:gap-3 transition-all duration-300 group">
               Reserve Your Spot
-              <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
           
-          <div className="order-1 md:order-2 relative rounded-none overflow-hidden">
+          <div className="order-1 md:order-2 relative rounded-3xl overflow-hidden shadow-2xl group">
             <img 
               src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" 
               alt="Luxury Dubai Interior"
-              className="w-full h-[600px] object-cover grayscale contrast-125"
+              className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 via-[#1a1a1a]/20 to-transparent" />
+            <div className="absolute inset-0 border-2 border-[#C9A961]/20 rounded-3xl" />
           </div>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section id="animate-projects" className="py-32 px-6 bg-black border-t border-gray-900">
+      <section id="animate-projects" className="py-28 px-6 bg-gradient-to-b from-[#1a1a1a] to-[#252525]">
         <div className="max-w-7xl mx-auto">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['animate-projects'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <span className="inline-block text-gray-500 text-xs font-light tracking-[0.3em] uppercase mb-6">
-              Premium Developments
-            </span>
-            <h2 className="text-5xl md:text-6xl font-extralight text-white mb-6">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-[#C9A961]/20 rounded-full bg-[#C9A961]/5">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961]" />
+              <span className="text-[#C9A961] text-xs font-semibold tracking-widest uppercase">
+                Premium Developments
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-serif text-[#f5f5f0] mb-6">
               Featured Projects
             </h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto font-light">
+            <p className="text-[#a3a399] text-lg max-w-2xl mx-auto">
               Explore world-class developments in Dubai's most prestigious locations
             </p>
           </div>
@@ -269,22 +314,26 @@ export default function Home() {
             {projects.map((project, idx) => (
               <div 
                 key={idx}
-                className="group bg-gray-950 border border-gray-900 overflow-hidden transition-all duration-500 hover:border-gray-700"
+                className="group bg-[#1a1a1a] rounded-3xl overflow-hidden border border-[#C9A961]/20 hover:border-[#C9A961]/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(201,169,97,0.2)] hover:-translate-y-2"
               >
                 <div className="relative h-72 overflow-hidden">
                   <img 
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent" />
+                  <div className="absolute top-5 left-5">
+                    <span className="bg-gradient-to-r from-[#C9A961] to-[#D4AF37] text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-bold shadow-lg">
+                      {project.price}
+                    </span>
+                  </div>
                 </div>
                 
-                <div className="p-6 border-t border-gray-900">
-                  <div className="text-xs text-gray-600 mb-2 tracking-wider uppercase font-light">{project.price}</div>
-                  <h3 className="text-xl font-light text-white mb-2">{project.name}</h3>
-                  <p className="text-gray-500 flex items-center text-sm font-light">
-                    <MapPin className="w-3 h-3 mr-2" />
+                <div className="p-6 bg-gradient-to-b from-transparent to-[#C9A961]/5">
+                  <h3 className="text-xl font-semibold text-[#f5f5f0] mb-3">{project.name}</h3>
+                  <p className="text-[#a3a399] flex items-center text-sm">
+                    <MapPin className="w-4 h-4 mr-2 text-[#C9A961]" />
                     {project.location}
                   </p>
                 </div>
@@ -292,8 +341,8 @@ export default function Home() {
             ))}
           </div>
           
-          <div className="text-center mt-16">
-            <button className="border border-gray-800 text-white px-12 py-4 rounded-full font-light hover:bg-gray-900/50 hover:border-gray-700 transition-all duration-300">
+          <div className="text-center mt-14">
+            <button className="border-2 border-[#C9A961] text-[#C9A961] px-12 py-4 rounded-full font-semibold hover:bg-[#C9A961] hover:text-[#1a1a1a] transition-all duration-300 hover:shadow-[0_20px_40px_rgba(201,169,97,0.3)]">
               View All Projects
             </button>
           </div>
@@ -301,16 +350,19 @@ export default function Home() {
       </section>
 
       {/* Why Attend */}
-      <section id="animate-highlights" className="py-32 px-6 max-w-7xl mx-auto border-t border-gray-900">
+      <section id="animate-highlights" className="py-28 px-6 max-w-7xl mx-auto">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['animate-highlights'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <span className="inline-block text-gray-500 text-xs font-light tracking-[0.3em] uppercase mb-6">
-            Event Benefits
-          </span>
-          <h2 className="text-5xl md:text-6xl font-extralight text-white mb-6">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-[#C9A961]/20 rounded-full bg-[#C9A961]/5">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961]" />
+            <span className="text-[#C9A961] text-xs font-semibold tracking-widest uppercase">
+              Event Benefits
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-serif text-[#f5f5f0] mb-6">
             Why Attend
           </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto font-light">
-            Exclusive benefits for discerning investors
+          <p className="text-[#a3a399] text-lg max-w-2xl mx-auto">
+            Exclusive benefits crafted for discerning investors
           </p>
         </div>
         
@@ -320,11 +372,13 @@ export default function Home() {
             return (
               <div 
                 key={idx}
-                className="bg-gray-950 border border-gray-900 p-10 transition-all duration-300 hover:border-gray-700 group"
+                className="group bg-gradient-to-br from-[#252525] to-[#1a1a1a] rounded-3xl p-8 border border-[#C9A961]/20 hover:border-[#C9A961]/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(201,169,97,0.15)] hover:-translate-y-2"
               >
-                <Icon className="w-10 h-10 text-gray-600 mb-6 group-hover:text-gray-400 transition-colors" />
-                <h3 className="text-xl font-light text-white mb-3">{item.title}</h3>
-                <p className="text-gray-500 leading-relaxed font-light text-sm">{item.desc}</p>
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C9A961]/20 to-[#C9A961]/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Icon className="w-8 h-8 text-[#C9A961]" />
+                </div>
+                <h3 className="text-xl font-semibold text-[#f5f5f0] mb-3">{item.title}</h3>
+                <p className="text-[#a3a399] leading-relaxed">{item.desc}</p>
               </div>
             )
           })}
@@ -332,33 +386,36 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 px-6 bg-black border-t border-gray-900">
+      <section className="py-28 px-6 bg-gradient-to-b from-[#252525] to-[#1a1a1a]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <span className="inline-block text-gray-500 text-xs font-light tracking-[0.3em] uppercase mb-6">
-              Success Stories
-            </span>
-            <h2 className="text-5xl md:text-6xl font-extralight text-white mb-6">
-              What Our Clients Say
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-[#C9A961]/20 rounded-full bg-[#C9A961]/5">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961]" />
+              <span className="text-[#C9A961] text-xs font-semibold tracking-widest uppercase">
+                Success Stories
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-serif text-[#f5f5f0] mb-6">
+              Client Testimonials
             </h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-gray-950 border border-gray-900 p-8">
+              <div key={idx} className="bg-[#1a1a1a] rounded-3xl p-8 border border-[#C9A961]/20 hover:border-[#C9A961]/40 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(201,169,97,0.1)]">
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-gray-700 text-gray-700" />
+                    <Star key={i} className="w-5 h-5 fill-[#C9A961] text-[#C9A961]" />
                   ))}
                 </div>
-                <p className="text-gray-400 mb-8 leading-relaxed font-light text-sm">{testimonial.text}</p>
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-900">
-                  <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
-                    <span className="text-gray-500 font-light text-sm">{testimonial.name.charAt(0)}</span>
+                <p className="text-[#d4d4c8] mb-8 leading-relaxed">{testimonial.text}</p>
+                <div className="flex items-center gap-4 pt-6 border-t border-[#C9A961]/20">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#C9A961]/30 to-[#C9A961]/10 flex items-center justify-center border border-[#C9A961]/30">
+                    <span className="text-[#C9A961] font-bold text-lg">{testimonial.name.charAt(0)}</span>
                   </div>
                   <div>
-                    <div className="font-light text-white text-sm">{testimonial.name}</div>
-                    <div className="text-xs text-gray-600 font-light">{testimonial.location}</div>
+                    <div className="font-semibold text-[#f5f5f0]">{testimonial.name}</div>
+                    <div className="text-sm text-[#a3a399]">{testimonial.location}</div>
                   </div>
                 </div>
               </div>
@@ -368,30 +425,36 @@ export default function Home() {
       </section>
 
       {/* Registration Form */}
-      <section id="register" className="py-32 px-6 bg-black border-t border-gray-900">
-        <div className="max-w-2xl mx-auto">
+      <section id="register" className="py-28 px-6 bg-gradient-to-br from-[#1a1a1a] via-[#252525] to-[#1a1a1a] relative overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A961]/5 rounded-full blur-3xl" />
+        
+        <div className="max-w-3xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <span className="inline-block text-gray-500 text-xs font-light tracking-[0.3em] uppercase mb-6">
-              Limited Spots
-            </span>
-            <h2 className="text-5xl md:text-6xl font-extralight text-white mb-6">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-[#C9A961]/20 rounded-full bg-[#C9A961]/5">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961] animate-pulse" />
+              <span className="text-[#C9A961] text-xs font-semibold tracking-widest uppercase">
+                Limited Spots Available
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-serif text-[#f5f5f0] mb-6">
               Reserve Your Spot
             </h2>
-            <p className="text-gray-500 text-lg font-light">
+            <p className="text-[#a3a399] text-lg">
               Secure your exclusive consultation slot today
             </p>
           </div>
           
           {showThankYou ? (
-            <div className="bg-gray-950 border border-gray-900 p-16 text-center">
-              <div className="w-16 h-16 rounded-full border border-gray-800 flex items-center justify-center mx-auto mb-8">
-                <Check className="w-8 h-8 text-gray-400" />
+            <div className="bg-gradient-to-br from-[#252525] to-[#1a1a1a] rounded-3xl p-16 text-center border-2 border-[#C9A961]/30 shadow-[0_20px_80px_rgba(201,169,97,0.2)]">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#C9A961]/20 to-[#C9A961]/5 border-2 border-[#C9A961]/50 flex items-center justify-center mx-auto mb-8">
+                <Check className="w-10 h-10 text-[#C9A961]" />
               </div>
-              <h3 className="text-3xl font-light text-white mb-4">Registration Confirmed</h3>
-              <p className="text-gray-500 font-light">We'll connect with you shortly via WhatsApp.</p>
+              <h3 className="text-3xl font-serif text-[#f5f5f0] mb-4">Registration Confirmed!</h3>
+              <p className="text-[#a3a399] text-lg">We'll connect with you shortly via WhatsApp.</p>
             </div>
           ) : (
-            <div className="bg-gray-950 border border-gray-900 p-12">
+            <div className="bg-gradient-to-br from-[#252525] to-[#1a1a1a] rounded-3xl p-10 md:p-14 border-2 border-[#C9A961]/30 shadow-[0_20px_80px_rgba(201,169,97,0.2)]">
               <div className="space-y-6">
                 <input
                   type="text"
@@ -399,7 +462,7 @@ export default function Home() {
                   placeholder="Full Name"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full bg-black border border-gray-900 px-6 py-4 text-white placeholder-gray-600 focus:border-gray-700 focus:outline-none transition-all font-light"
+                  className="w-full bg-[#1a1a1a] border-2 border-[#C9A961]/30 rounded-2xl px-6 py-4 text-[#f5f5f0] placeholder-[#a3a399] focus:border-[#C9A961] focus:outline-none transition-all"
                 />
                 
                 <input
@@ -408,7 +471,7 @@ export default function Home() {
                   placeholder="Email Address"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full bg-black border border-gray-900 px-6 py-4 text-white placeholder-gray-600 focus:border-gray-700 focus:outline-none transition-all font-light"
+                  className="w-full bg-[#1a1a1a] border-2 border-[#C9A961]/30 rounded-2xl px-6 py-4 text-[#f5f5f0] placeholder-[#a3a399] focus:border-[#C9A961] focus:outline-none transition-all"
                 />
                 
                 <input
@@ -417,14 +480,14 @@ export default function Home() {
                   placeholder="Phone / WhatsApp Number"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  className="w-full bg-black border border-gray-900 px-6 py-4 text-white placeholder-gray-600 focus:border-gray-700 focus:outline-none transition-all font-light"
+                  className="w-full bg-[#1a1a1a] border-2 border-[#C9A961]/30 rounded-2xl px-6 py-4 text-[#f5f5f0] placeholder-[#a3a399] focus:border-[#C9A961] focus:outline-none transition-all"
                 />
                 
                 <select
                   required
                   value={formData.budget}
                   onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                  className="w-full bg-black border border-gray-900 px-6 py-4 text-white focus:border-gray-700 focus:outline-none transition-all font-light"
+                  className="w-full bg-[#1a1a1a] border-2 border-[#C9A961]/30 rounded-2xl px-6 py-4 text-[#f5f5f0] focus:border-[#C9A961] focus:outline-none transition-all"
                 >
                   <option value="">Investment Budget</option>
                   <option value="500k-1m">AED 500K - 1M</option>
@@ -438,17 +501,17 @@ export default function Home() {
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                   rows={4}
-                  className="w-full bg-black border border-gray-900 px-6 py-4 text-white placeholder-gray-600 focus:border-gray-700 focus:outline-none transition-all resize-none font-light"
+                  className="w-full bg-[#1a1a1a] border-2 border-[#C9A961]/30 rounded-2xl px-6 py-4 text-[#f5f5f0] placeholder-[#a3a399] focus:border-[#C9A961] focus:outline-none transition-all resize-none"
                 />
                 
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-white text-black px-10 py-5 font-medium hover:bg-gray-200 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-[#C9A961] via-[#D4AF37] to-[#C9A961] text-[#1a1a1a] px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-[0_20px_60px_rgba(201,169,97,0.4)] transition-all duration-300 hover:scale-[1.02]"
                 >
                   Register Now
                 </button>
 
-                <p className="text-center text-xs text-gray-600 font-light">
+                <p className="text-center text-sm text-[#a3a399]">
                   By registering, you agree to receive event updates
                 </p>
               </div>
@@ -458,9 +521,9 @@ export default function Home() {
       </section>
 
       {/* Contact & Map */}
-      <section id="animate-contact" className="py-32 px-6 max-w-7xl mx-auto border-t border-gray-900">
+      <section id="animate-contact" className="py-28 px-6 max-w-7xl mx-auto">
         <div className={`grid md:grid-cols-2 gap-16 transition-all duration-1000 ${isVisible['animate-contact'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <div className="overflow-hidden h-[500px] grayscale">
+          <div className="rounded-3xl overflow-hidden h-[500px] border-2 border-[#C9A961]/20">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5!2d76.99!3d11.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDAwJzM2LjAiTiA3NsKwNTknMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
@@ -474,39 +537,48 @@ export default function Home() {
           
           <div className="space-y-10">
             <div>
-              <span className="inline-block text-gray-500 text-xs font-light tracking-[0.3em] uppercase mb-6">
-                Get In Touch
-              </span>
-              <h2 className="text-5xl font-extralight text-white mb-6">
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-[#C9A961]/20 rounded-full bg-[#C9A961]/5">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961]" />
+                <span className="text-[#C9A961] text-xs font-semibold tracking-widest uppercase">
+                  Get In Touch
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif text-[#f5f5f0] mb-6">
                 Visit Us
               </h2>
-              <p className="text-gray-500 text-lg font-light">
+              <p className="text-[#a3a399] text-lg">
                 Reach us for exclusive Dubai investment consultations
               </p>
             </div>
             
             <div className="space-y-6">
-              <div className="flex items-start space-x-4 p-6 border border-gray-900 bg-gray-950">
-                <MapPin className="w-5 h-5 text-gray-600 flex-shrink-0 mt-1" />
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-[#252525] to-[#1a1a1a] border border-[#C9A961]/20 hover:border-[#C9A961]/40 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C9A961]/20 to-[#C9A961]/5 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-[#C9A961]" />
+                </div>
                 <div>
-                  <h4 className="font-light text-white mb-2 text-sm">Event Venue</h4>
-                  <p className="text-gray-500 font-light text-sm">Vivanta Surya, by Taj<br />Coimbatore, Tamil Nadu</p>
+                  <h4 className="font-semibold text-[#f5f5f0] mb-2">Event Venue</h4>
+                  <p className="text-[#a3a399]">Vivanta Surya, by Taj<br />Coimbatore, Tamil Nadu</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4 p-6 border border-gray-900 bg-gray-950">
-                <Phone className="w-5 h-5 text-gray-600 flex-shrink-0 mt-1" />
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-[#252525] to-[#1a1a1a] border border-[#C9A961]/20 hover:border-[#C9A961]/40 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C9A961]/20 to-[#C9A961]/5 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-[#C9A961]" />
+                </div>
                 <div>
-                  <h4 className="font-light text-white mb-2 text-sm">Contact Number</h4>
-                  <a href="tel:+919187138799" className="text-gray-400 font-light text-sm hover:text-white transition-colors">+91 91871 38799</a>
+                  <h4 className="font-semibold text-[#f5f5f0] mb-2">Contact Number</h4>
+                  <a href="tel:+919187138799" className="text-[#C9A961] font-semibold hover:text-[#D4AF37] transition-colors">+91 91871 38799</a>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4 p-6 border border-gray-900 bg-gray-950">
-                <Mail className="w-5 h-5 text-gray-600 flex-shrink-0 mt-1" />
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-[#252525] to-[#1a1a1a] border border-[#C9A961]/20 hover:border-[#C9A961]/40 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C9A961]/20 to-[#C9A961]/5 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-[#C9A961]" />
+                </div>
                 <div>
-                  <h4 className="font-light text-white mb-2 text-sm">Email</h4>
-                  <a href="mailto:info@superrealtydubai.com" className="text-gray-400 font-light text-sm hover:text-white transition-colors">info@superrealtydubai.com</a>
+                  <h4 className="font-semibold text-[#f5f5f0] mb-2">Email</h4>
+                  <a href="mailto:info@superrealtydubai.com" className="text-[#C9A961] hover:text-[#D4AF37] transition-colors">info@superrealtydubai.com</a>
                 </div>
               </div>
             </div>
@@ -514,8 +586,9 @@ export default function Home() {
             <div className="pt-6">
               <a 
                 href="https://wa.me/919187138799"
-                className="inline-flex items-center bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-200 transition-all duration-300"
+                className="inline-flex items-center bg-gradient-to-r from-[#C9A961] to-[#D4AF37] text-[#1a1a1a] px-8 py-4 rounded-full font-bold hover:shadow-[0_20px_40px_rgba(201,169,97,0.4)] transition-all duration-300 hover:scale-105"
               >
+                <Phone className="w-5 h-5 mr-2" />
                 WhatsApp Us
               </a>
             </div>
@@ -524,37 +597,37 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black py-20 px-6 border-t border-gray-900">
+      <footer className="bg-gradient-to-b from-[#1a1a1a] to-[#0f0f0f] py-20 px-6 border-t border-[#C9A961]/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-extralight text-white mb-3">
+            <h3 className="text-3xl font-serif text-[#f5f5f0] mb-3">
               Super Realty Dubai
             </h3>
-            <p className="text-gray-600 font-light text-sm">Your Gateway to Premium Dubai Properties</p>
+            <p className="text-[#a3a399]">Your Gateway to Premium Dubai Properties</p>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-10 mb-12 text-xs">
-            <a href="#" className="text-gray-600 hover:text-white transition-colors font-light">About Us</a>
-            <a href="#" className="text-gray-600 hover:text-white transition-colors font-light">Properties</a>
-            <a href="#register" className="text-gray-600 hover:text-white transition-colors font-light">Register</a>
-            <a href="#" className="text-gray-600 hover:text-white transition-colors font-light">Contact</a>
+          <div className="flex flex-wrap justify-center gap-10 mb-12 text-sm">
+            <a href="#" className="text-[#a3a399] hover:text-[#C9A961] transition-colors">About Us</a>
+            <a href="#" className="text-[#a3a399] hover:text-[#C9A961] transition-colors">Properties</a>
+            <a href="#register" className="text-[#a3a399] hover:text-[#C9A961] transition-colors">Register</a>
+            <a href="#" className="text-[#a3a399] hover:text-[#C9A961] transition-colors">Contact</a>
           </div>
 
           <div className="flex justify-center space-x-6 mb-12">
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:border-gray-700 transition-all duration-300">
-              <Instagram className="w-4 h-4 text-gray-600" />
+            <a href="#" className="w-12 h-12 rounded-full border border-[#C9A961]/30 flex items-center justify-center hover:bg-[#C9A961]/10 hover:border-[#C9A961]/50 transition-all duration-300">
+              <Instagram className="w-5 h-5 text-[#C9A961]" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:border-gray-700 transition-all duration-300">
-              <Linkedin className="w-4 h-4 text-gray-600" />
+            <a href="#" className="w-12 h-12 rounded-full border border-[#C9A961]/30 flex items-center justify-center hover:bg-[#C9A961]/10 hover:border-[#C9A961]/50 transition-all duration-300">
+              <Linkedin className="w-5 h-5 text-[#C9A961]" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:border-gray-700 transition-all duration-300">
-              <Facebook className="w-4 h-4 text-gray-600" />
+            <a href="#" className="w-12 h-12 rounded-full border border-[#C9A961]/30 flex items-center justify-center hover:bg-[#C9A961]/10 hover:border-[#C9A961]/50 transition-all duration-300">
+              <Facebook className="w-5 h-5 text-[#C9A961]" />
             </a>
           </div>
           
           <div className="text-center">
-            <div className="h-px w-64 mx-auto bg-gray-900 mb-6" />
-            <p className="text-gray-700 text-xs font-light">© 2025 Super Realty Dubai. All rights reserved.</p>
+            <div className="h-px w-64 mx-auto bg-gradient-to-r from-transparent via-[#C9A961]/30 to-transparent mb-6" />
+            <p className="text-[#6b6b60] text-sm">© 2025 Super Realty Dubai. All rights reserved.</p>
           </div>
         </div>
       </footer>
