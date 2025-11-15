@@ -536,4 +536,28 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-10 mb-12 text-xs">
             <a href="#" className="text-gray-600 hover:text-white transition-colors font-light">About Us</a>
             <a href="#" className="text-gray-600 hover:text-white transition-colors font-light">Properties</a>
-            <a href="#register" className="text
+            <a href="#register" className="text-gray-600 hover:text-white transition-colors font-light">Register</a>
+            <a href="#" className="text-gray-600 hover:text-white transition-colors font-light">Contact</a>
+          </div>
+
+          <div className="flex justify-center space-x-6 mb-12">
+            <a href="#" className="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:border-gray-700 transition-all duration-300">
+              <Instagram className="w-4 h-4 text-gray-600" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:border-gray-700 transition-all duration-300">
+              <Linkedin className="w-4 h-4 text-gray-600" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:border-gray-700 transition-all duration-300">
+              <Facebook className="w-4 h-4 text-gray-600" />
+            </a>
+          </div>
+          
+          <div className="text-center">
+            <div className="h-px w-64 mx-auto bg-gray-900 mb-6" />
+            <p className="text-gray-700 text-xs font-light">© 2025 Super Realty Dubai. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
