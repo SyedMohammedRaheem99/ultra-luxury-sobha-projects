@@ -66,12 +66,12 @@ export default function Home() {
   ]
 
   const highlights = [
-    { icon: Users, title: 'Meet Dubai's Elite Property Experts', desc: 'Face-to-face access to top consultants from leading developers' },
+    { icon: Users, title: 'Meet Dubai Elite Property Experts', desc: 'Face-to-face access to top consultants from leading developers' },
     { icon: Building2, title: 'Investment-Grade Premium Projects', desc: 'Handpicked luxury developments with proven ROI' },
     { icon: Award, title: 'Exclusive Launch Offers & Discounts', desc: 'Special pricing available only at this event - up to 5% off' },
     { icon: Globe, title: 'Golden Visa & Residency Support', desc: 'Complete guidance for property-based UAE residency' },
     { icon: Shield, title: 'Verified Developer Partners Only', desc: 'Work directly with Emaar, Sobha, DAMAC & Azizi' },
-    { icon: Camera, title: '360° Virtual Property Tours', desc: 'Immersive walkthroughs of your dream Dubai home' }
+    { icon: Camera, title: '360 Virtual Property Tours', desc: 'Immersive walkthroughs of your dream Dubai home' }
   ]
 
   const stats = [
